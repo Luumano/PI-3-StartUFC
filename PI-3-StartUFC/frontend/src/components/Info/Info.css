@@ -1,0 +1,91 @@
+
+.info-section {
+    max-width: 1180px;
+    margin: 8rem auto;
+    padding: 0 1rem;
+    background-color: #f8f9fa;
+}
+
+
+.info-grid {
+    display: grid;
+    /* 4 colunas de tamanho igual */
+    grid-template-columns: repeat(4, 1fr);
+    /* Define a altura das linhas para criar cards quadrados */
+    grid-auto-rows: minmax(180px, 1fr);
+    gap: 1.5rem; /* Espaçamento consistente */
+}
+
+/* Estilo base para TODOS os cards */
+.info-box {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.logo-box {
+    /* FAZ O LOGO OCUPAR DUAS COLUNAS */
+    grid-column: span 2;
+    background-color: transparent;
+    box-shadow: none;
+
+}
+
+
+.logo-box:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+
+.logo-box img {
+    width: 80%; 
+    height: auto;
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+}
+
+.dark-box {
+    background-color: #002A3A; /* Cor escura */
+    color: white;
+}
+
+.green-box {
+    background-color: #38D430; /* Cor verde */
+    color: #002A3A;
+}
+
+/* Estilo do texto dentro dos cards */
+.box-text {
+    font-family: "Gabarito", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Estilo e posição do ícone */
+.box-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    
+}
+
+
+
+@media (max-width: 768px) {
+    .info-grid {
+    
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .logo-box {
+        grid-column: span 2;
+    }
+}

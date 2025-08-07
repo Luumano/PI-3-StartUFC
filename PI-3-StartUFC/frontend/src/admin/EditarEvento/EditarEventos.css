@@ -1,0 +1,158 @@
+.editar-eventos {
+    background-color: #f0f2f5; /* Fundo mais suave */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container-editar {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra mais suave */
+}
+
+.container-editar h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Aumenta o espaço entre os cards */
+}
+
+.card {
+    background-color: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Aumenta o espaço entre os elementos dentro do card */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.card .img-evento {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.card label {
+    font-weight: 600;
+    color: #555;
+    margin-top: 5px;
+}
+
+.card input[type="text"],
+.card textarea,
+.card input[type="date"],
+.card input[type="time"],
+.card input[type="number"],
+.card input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.card input[type="text"]:focus,
+.card textarea:focus,
+.card input[type="date"]:focus,
+.card input[type="time"]:focus,
+.card input[type="number"]:focus,
+.card input[type="file"]:focus {
+    outline: none;
+    border-color: #4CAF50; /* Cor de foco */
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.card textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card button {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.card button.salvar {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.card button.salvar:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+}
+
+.card button.excluir {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.card button.excluir:hover {
+    background-color: #e53935;
+    transform: translateY(-2px);
+}
+
+.mensagem {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.mensagem.success {
+    color: #388e3c;
+    background-color: #e8f5e9;
+    border: 1px solid #a5d6a7;
+}
+
+.mensagem.error {
+    color: #d32f2f;
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+}
+
+.no-events {
+    text-align: center;
+    color: #777;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}

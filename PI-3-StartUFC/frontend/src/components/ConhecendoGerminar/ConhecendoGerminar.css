@@ -1,0 +1,81 @@
+
+.conhecendo-section {
+  padding: 4rem 5%;
+background-color: #f8f9fa;
+  font-family: "Open Sans", sans-serif; 
+}
+
+
+.conhecendo-title {
+   font-family: "Gabarito", serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0; 
+    text-align: left; 
+}
+
+
+.conhecendo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; 
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.intro-paragraph,
+.content-row p {
+  font-family: "Open Sans", serif;
+  text-align: justify;
+  font-size: 1.5rem; 
+  line-height: 1.4; 
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+   
+}
+
+
+.content-row {
+  display: flex;
+  align-items: center; 
+  gap: 2rem; 
+}
+
+
+.drop-cap-image {
+  width: 110px; 
+  height: auto;
+}
+
+.content-image {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  background-color: #1a2e35;
+  flex-shrink: 0;
+}
+
+
+@media (max-width: 768px) {
+  .conhecendo-title {
+    font-size: 2.5rem; /* Ajustado para mobile */
+    text-align: center;
+  }
+
+  .intro-paragraph,
+  .content-row p {
+    font-size: 1.25rem; /* Fonte menor em telas pequenas para não quebrar o layout */
+  }
+
+  .content-row {
+    flex-direction: column;
+    text-align: center; /* Centraliza o texto quando empilhado */
+  }
+
+  .content-image {
+    width: 100%;
+    height: 200px;
+  }
+}

@@ -1,0 +1,203 @@
+.perfil-container {
+    max-width: 500px;
+    background-color: #002A3A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin: 120px auto;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.perfil-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.perfil-container img.foto-perfil {
+    display: block;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #00ff00;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+
+.perfil-container p {
+    font-size: 16px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.perfil-container p strong {
+    width: 90px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+
+.perfil-container p strong {
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.traco1,
+.traco2 {
+    border: 1px solid #38d430;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.config {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button.edit1 {
+    font-size: 14px;
+    color: #ffffff;
+    background: #868201;
+    border: 1px solid #4f4f03;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+button.sair,
+button.exclu {
+    font-size: 14px;
+    color: #ffffff;
+    background: #6e0606;
+    border: 1px solid #290101;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+button.edit1:hover{
+    background: #5c5602;
+    color: #ffffff;
+}
+
+button.sair:hover,
+button.exclu:hover{
+  background: #4e0000;
+  color: #FFF;
+}
+
+.eventos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.eventos-lista li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+
+.Nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #002A3A;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+
+.Nav1 {
+    position: fixed;
+    width: 100%;
+    height: 5px;
+    background-color: #38d430;
+    top: 50px;
+    left: 0;
+    z-index: 9;
+}
+
+.seta {
+    height: 25px;
+    cursor: pointer;
+}
+
+.logo {
+    position: absolute;
+    width: 8%;
+    left: 55%;
+    top: 5px;
+}
+
+.titulo {
+    position: absolute;
+    display: flex;
+    top: 50px;
+    font-size: 20px;
+    left: 55%;
+}
+
+@media (max-width: 768px) {
+    .perfil-container {
+        width: 90%;
+        margin-top: 100px;
+        padding: 15px;
+    }
+
+    .perfil-container img.foto-perfil {
+        width: 80px;
+        height: 80px;
+    }
+
+    .config {
+        font-size: 16px;
+    }
+
+    .Nav .titulo {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .perfil-container {
+        width: 95%;
+        margin-top: 90px;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .perfil-container p strong {
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

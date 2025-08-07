@@ -1,0 +1,93 @@
+
+
+.comunicacao-page {
+    
+    background-color: FDFDFD; 
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.comunicacao-container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Ocupa a altura da tela, descontando a navbar */
+}
+
+/* Layout de duas colunas */
+.comunicacao-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+}
+
+.left-column, .right-column {
+    flex: 1; 
+}
+
+/* Coluna da Esquerda */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.left-column h1 {
+    font-family: "Gabarito", serif;
+    font-size: 2.8rem;
+    color: #002A3A;
+    font-weight: 700;
+    margin: 0;
+}
+.social-icons-wrapper {
+    display: flex;
+    gap: 1.5rem;
+}
+.social-icons-wrapper a {
+    color: #002A3A;
+    font-size: 2.5rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.social-icons-wrapper a:hover {
+    transform: scale(1.1);
+    color: #38D430;
+}
+.comunicacao-logo {
+    width: 250px;
+    height: auto;
+}
+
+
+.right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mao-celular-img {
+    max-width: 100%;
+    height: auto;
+   
+}
+
+
+@media (max-width: 900px) {
+    .comunicacao-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 3rem;
+    }
+    .left-column {
+        align-items: center;
+    }
+    
+    /* Regra para esconder a imagem no mobile, como combinado */
+    .right-column {
+        display: none; 
+    }
+}

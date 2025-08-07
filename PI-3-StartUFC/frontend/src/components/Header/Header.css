@@ -1,0 +1,92 @@
+.header {
+    max-width: 1180px;
+    width: 100%; 
+    margin: 7rem auto; 
+    padding: 0 1rem; /* Espaçamento de segurança nas laterais */
+    background-color: #f8f9fa;
+}
+
+/* O container do conteúdo, que cria as duas colunas */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem; /* Espaço entre a coluna da esquerda e a imagem */
+    background-color: #f8f9fa;
+}
+
+/* A coluna da esquerda que agrupa logo, texto e botão */
+.header-start {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha tudo à esquerda */
+    gap: 1.5rem; /* Espaço entre os itens internos */
+}
+
+.header-logo {
+    width: 297px; 
+    height: auto;
+}
+
+.text-initial p {
+    font-family: "Open Sans", serif;
+    font-size: 1.75rem; 
+    font-weight: bold;
+    line-height: 1.4; 
+    color: #333;
+    margin: 0;
+}
+
+.header-img {
+    width: 400px; /* Valor fixo para a imagem */
+    height: auto;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+.header-cta-button {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none; 
+  color: inherit;       
+}
+
+.header-cta-button:hover {
+  /* Aumenta o tamanho do botão em 5% ao passar o mouse */
+  transform: scale(1.05);
+}
+
+
+
+@media (max-width: 950px) {
+    /* Faz as colunas se empilharem */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Centraliza o conteúdo da coluna da esquerda */
+    .header-start {
+        align-items: center;
+        order: 2; /* O texto e o botão vêm depois da imagem */
+    }
+
+    .header-img {
+        order: 1; /* A imagem vem primeiro */
+        width: 350px; /* Diminui um pouco a imagem no mobile */
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        width: 220px;
+    }
+
+    .text-initial p {
+        font-size: 1.2rem;
+    }
+
+    .header-img {
+        width: 80%; /* Ocupa 80% da largura da tela */
+    }
+}

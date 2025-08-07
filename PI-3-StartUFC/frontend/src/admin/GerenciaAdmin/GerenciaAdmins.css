@@ -1,0 +1,69 @@
+.gerenciar-usuarios {
+    background-color: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.usuarios-container {
+    padding: 40px 60px;
+    flex-grow: 1;
+}
+
+.usuarios-container h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #002734;
+}
+
+.usuarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.usuario-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.usuario-card input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.usuario-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.usuario-actions button {
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+.usuario-actions button:hover {
+    background-color: #0056b3;
+}
+
+.usuario-actions .excluir {
+    background-color: #dc3545;
+}
+
+.usuario-actions .excluir:hover {
+    background-color: #a71d2a;
+}

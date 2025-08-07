@@ -1,0 +1,105 @@
+
+.editar-perfil-container {
+  position: relative;
+    top: 150px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .editar-perfil-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .editar-perfil-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .editar-perfil-container input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .editar-perfil-container button {
+    background-color: #002A3A;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .editar-perfil-container button:hover {
+    background-color: rgba(56, 212, 48, 1);
+  }
+  
+  .editar-perfil-container input::placeholder {
+    color: #888;
+  }
+  
+  .Nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #002A3A;
+    top: 0;
+   }
+   .Nav1{
+    position: fixed;
+    width: 100%;
+    top: 50px;
+    height: 25px;
+    background-color: rgba(56, 212, 48, 1);
+   }
+   
+   .seta{
+    position: absolute;
+    top: 10px;
+    padding: 0 1rem;
+   }
+   .logo{
+    position: absolute;
+    width: 8%;
+    left: 47%;
+    top: 5px;
+   }
+   .titulo{
+    position: absolute;
+      display: flex;
+      top: 50px;
+      font-size: 20px;
+      left: 46%;
+   }
+
+    /* Para telas menores que 1024px */
+ @media (max-width: 1024px) {
+  
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+
+  .titulo {
+      font-size: 16px;
+      left: 35%;
+  }
+
+  .logo {
+      width: 20%;
+      left: 43%;
+      top: 10px;
+  }
+}

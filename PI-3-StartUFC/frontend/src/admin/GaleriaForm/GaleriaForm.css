@@ -1,0 +1,54 @@
+.gallery-form-content {
+    margin: 0 18%;
+    padding-top: 2vw;
+    background-color: #f8f9fa;
+}
+
+.gallery-form-content h2 {
+    font-family: "Gabarito", serif;
+    font-size: 30px;
+    padding: 4% 0;
+}
+
+.gallery-form-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Open Sans', serif;
+}
+
+.input-title input {
+    width: 640px; 
+    height: 40px; 
+    font-size: 16px;
+    font-family: 'Open Sans', serif;
+}
+
+.upload-img {
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.upload-img svg {
+    margin-right: 8px;
+}
+
+.upload-img input {
+    margin-top: 2%;
+}
+
+.add-img {
+    padding: 0 1%;
+}
+
+.gallery-form-content button {
+    margin-top: 3%;
+    padding: 8px;
+}
+
+@media (max-width: 880px) {
+    .input-title input {
+        width: 480px;
+    }
+}

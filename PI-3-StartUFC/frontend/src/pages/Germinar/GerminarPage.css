@@ -1,0 +1,78 @@
+
+.germinarPage {
+  width: 100%;
+  min-height: 100vh; /* Ocupa a altura inteira da tela */
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa; /* Um fundo claro, ajuste se necessário */
+}
+
+/* Container do conteúdo principal (texto + imagem) */
+.germinar-content {
+  display: flex;
+  justify-content: space-around; /* Espaça os itens */
+  align-items: center; /* Alinha verticalmente */
+  flex-grow: 1; /* Faz este container ocupar o espaço restante na tela */
+  padding: 2rem 5%; /* Adiciona um respiro nas laterais */
+  gap: 2rem; /* Espaçamento entre o texto e a imagem */
+}
+
+/* Container da esquerda (título, parágrafo e botão) */
+.germinar-start {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Espaçamento vertical entre os elementos internos */
+  max-width: 550px; /* Limita a largura do texto */
+}
+
+.title-g {
+  font-size: 3rem;
+  color: #333;
+  margin: 0;
+}
+
+.text-germinar p {
+font-family: "Open Sans", serif;
+    font-size: 1.75rem; 
+    font-weight: bold;
+    line-height: 1.4; 
+    color: #333;
+    margin: 0;
+}
+
+/* Estilo para o link do botão, se necessário */
+.germinar-cta-button {
+  text-decoration: none;
+  width: fit-content; /* Faz o link ter a largura do botão */
+}
+
+/* A imagem da direita */
+.germinar-img {
+  max-width: 20%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.germinar-logo {
+  width: 297px; 
+    height: auto;
+}
+
+
+@media (max-width: 900px) {
+  .germinar-content {
+    flex-direction: column; /* Coloca a imagem embaixo do texto */
+    text-align: center;
+  }
+
+  .germinar-start {
+    align-items: center; 
+    order: 2; /* Faz o texto vir depois da imagem */
+  }
+
+  .germinar-img {
+    max-width: 70%;
+    order: 1; /* Faz a imagem aparecer primeiro */
+  }
+}

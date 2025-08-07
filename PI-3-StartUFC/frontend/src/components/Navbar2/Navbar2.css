@@ -1,0 +1,22 @@
+.nav2 {
+    background: #f8f9fa;
+    padding: 1.2rem 0;
+    width: 100%;
+    box-shadow: none; 
+    border-bottom: none;
+}
+
+.navbar2-container {
+   
+    max-width: 1180px; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem; 
+}
+
+.navbar2-seta {
+    width: 27px; /* Tamanho do ícone de seta */
+    height: auto;
+    display: block; /* Garante que a imagem não tenha espaço extra embaixo */
+}
+

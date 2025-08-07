@@ -1,0 +1,35 @@
+
+.btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-family: "Gabarito", serif;
+    font-size: 1.2rem;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+  }
+  
+  .btn.green {
+    background-color: #38D430;
+    color: #000000;
+  }
+  
+  .btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 500px) {
+    .btn{
+      font-size: 10px;
+    }
+    .btn.green{
+        margin-top: 4%;
+        padding: 0.4rem 1rem !important;
+    }
+}
+
+  

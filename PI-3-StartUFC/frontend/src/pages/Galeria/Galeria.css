@@ -1,0 +1,138 @@
+
+.pagina-galeria {
+  background-color: #f8f9fa;
+}
+.algo{
+  margin-top: 100px;
+}
+
+.galeria-container-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; 
+
+}
+
+.galeria-titulo-pagina {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1a2e35;
+}
+
+.galeria-evento-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.galeria-evento-descricao {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+
+/* Galeria.css */
+
+.pagina-galeria {
+    /* Mantenha o estilo da sua página aqui */
+}
+
+.galeria-container-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.galeria-titulo-pagina {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.galeria-filtros {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filtro-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtro-item label {
+    font-weight: bold;
+    color: #555;
+}
+
+.galeria-select-filtro {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #fff;
+    -webkit-appearance: none; /* Remove o estilo padrão em WebKit */
+    -moz-appearance: none;    /* Remove o estilo padrão em Mozilla */
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23333" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1px center;
+}
+
+.galeria-select-filtro:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.galeria-evento {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.galeria-evento-titulo {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.galeria-evento-data {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .galeria-container-principal {
+    padding: 2rem 1rem; /* Diminui o espaçamento da página */
+    gap: 3rem;
+  }
+
+  .galeria-titulo-pagina {
+    font-size: 2.2rem; /* Diminui o título principal */
+    text-align: center;
+  }
+
+  .galeria-evento-titulo {
+    font-size: 1.5rem; /* Diminui o título de cada evento */
+  }
+
+  .galeria-evento-descricao {
+    font-size: 1rem; /* Diminui a descrição */
+    margin-bottom: 1.5rem;
+  }
+}

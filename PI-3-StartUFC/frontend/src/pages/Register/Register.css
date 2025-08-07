@@ -1,0 +1,208 @@
+.register-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+
+.container-register {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #23D319; 
+  width: 100%;
+  max-width: 50rem;
+  height: 40rem; 
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+.side-bar-register {
+  background-color: #0A2533; /* Azul escuro */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  color: #fff; 
+}
+
+.side-bar-register  p{
+  font-size: 40px;
+  color: white; 
+}
+
+.side-bar-register .img-logo {
+ width: 190px;
+}
+
+.side-bar-register .button-btn-login {
+  background: #23D319; 
+  width: 80%;
+  color: #0A2533; 
+  padding: 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  transition: transform 0.2s;
+}
+.side-bar-register .button-btn-login:hover {
+  transform: scale(1.05);
+}
+
+
+.register-info {
+  width: 60%;
+  padding: 2.5rem 3rem;
+  background-color: #23D319; 
+  display: flex;
+  flex-direction: column;
+}
+
+.register-title {
+  font-size: 2rem;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.register-info form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-info label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.register-info input[type="text"],
+.register-info input[type="email"],
+.register-info input[type="tel"],
+.register-info input[type="password"] {
+  height: 2.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.register-info input[type="file"] {
+  margin-bottom: 1.5rem;
+}
+
+.create-account-button {
+  background: #0A2533; 
+  width: 80%;
+  max-width: 250px; 
+  color: rgb(255, 255, 255); 
+  padding: 12px;
+  border: none; 
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s;
+  display: block;
+  margin: 0 auto;
+}
+
+.create-account-button:hover {
+  transform: scale(1.05);
+}
+
+.create-account-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+
+.register-message {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.register-error-message {
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
+.register-success-message {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+}
+
+/* 1. Container para o input e o ícone */
+.password-input-container {
+  position: relative;
+  width: 100%;
+  /* A margem de baixo que antes estava no input, agora fica no container */
+  margin-bottom: 1rem;
+}
+
+/* 2. Estilo e posicionamento do ícone */
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+
+/* Usamos a classe específica do input de senha da tela de registro */
+.register-info .register-password-input {
+  padding-right: 50px !important;
+
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 900px) {
+  .register-page-wrapper {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .container-register {
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  .side-bar-register,
+  .register-info {
+    width: 100%;
+  }
+
+  .side-bar-register {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .register-info {
+    padding: 2rem 1.5rem;
+  }
+}

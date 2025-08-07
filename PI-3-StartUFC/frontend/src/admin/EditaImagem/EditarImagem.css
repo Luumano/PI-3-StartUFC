@@ -1,0 +1,235 @@
+/* Estilos Gerais do Componente */
+.editar-imagem {
+    background-color: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-editar {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.container-editar h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.mensagem {
+    text-align: center;
+    padding: 10px;
+    background-color: #e2f5e2;
+    color: #388e3c;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+/* Layout de Cards */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo do Card da Galeria (tela principal) */
+.card-galeria {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-galeria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-galeria img {
+    width: 100%;
+    max-height: 200px; /* Limita a altura para uniformizar os cards */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.card-galeria h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.botoes-galeria {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.botoes-galeria button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.botoes-galeria button:first-child {
+    background-color: #007bff; /* Cor para o botão de editar */
+    color: white;
+}
+.botoes-galeria button:first-child:hover {
+    background-color: #0056b3;
+}
+.botoes-galeria button:last-child {
+    background-color: #dc3545; /* Cor para o botão de excluir */
+    color: white;
+}
+.botoes-galeria button:last-child:hover {
+    background-color: #c82333;
+}
+
+
+/* Estilo do Card de Imagem Individual (tela de edição) */
+.card {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card img {
+    width: 100%;
+    max-height: 300px; /* Reduz o tamanho máximo da imagem */
+    object-fit: contain; /* Ajusta a imagem sem cortá-la */
+    border-radius: 4px;
+    align-self: center; /* Centraliza a imagem se ela for menor que o container */
+}
+
+/* Estilos para o formulário e botões de ação */
+.adicionar-imagem-form {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.adicionar-imagem-form label {
+    font-weight: bold;
+}
+.adicionar-imagem-form input[type="file"] {
+    flex-grow: 1;
+}
+
+.card-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas pequenas */
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-buttons .salvar, .card-buttons .excluir {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.card-buttons .salvar {
+    background-color: #28a745;
+    color: #fff;
+}
+.card-buttons .salvar:hover {
+    background-color: #218838;
+}
+.card-buttons .excluir {
+    background-color: #dc3545;
+    color: #fff;
+}
+.card-buttons .excluir:hover {
+    background-color: #c82333;
+}
+
+/* Estilização do input de arquivo como um botão */
+.file-upload-label {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    flex: 1;
+}
+.file-upload-label:hover {
+    background-color: #0056b3;
+}
+.hidden-file-input {
+    display: none;
+}
+
+/* Botão de voltar */
+.back-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+.back-button:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.top-buttons {
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-editar h2 {
+        font-size: 1.5rem;
+    }
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+    .card-buttons {
+        flex-direction: column;
+    }
+    .file-upload-label,
+    .card-buttons .salvar,
+    .card-buttons .excluir {
+        flex: none;
+        width: 100%;
+    }
+}

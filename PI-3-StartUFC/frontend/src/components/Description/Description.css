@@ -1,0 +1,95 @@
+
+
+.description-section {
+    position: relative;
+    margin-top: 4rem; /* Usa uma unidade mais consistente */
+    background-color: #f8f9fa;
+}
+
+/* Div externa que ocupa a largura toda */
+.description-full-background {
+    background: #002A3A;
+    color: white;
+    padding: 7rem 0; /* Espaçamento vertical */
+    width: 100%;
+}
+
+.description-inner-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Espaçamento de segurança nas laterais */
+
+    display: flex; /* Cria as colunas lado a lado */
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    text-align: justify;
+}
+
+
+.description-title {
+    flex-basis: 45%; 
+    flex-shrink: 0;
+}
+
+.description-title h2 {
+    font-family: "Gabarito", serif;
+    font-size: 3rem; /* Tamanho de fonte consistente */
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Coluna da Direita: Texto */
+.description-text {
+    flex-basis: 50%; /* Ocupa 50% do espaço */
+}
+
+.description-text p {
+    font-family: "Open Sans", serif;
+    font-size: 1.3rem; /* Tamanho de fonte consistente */
+    font-weight: normal;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+
+.description-section::before,
+.description-section::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 2; 
+}
+
+.description-section::before {
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #38D430;
+}
+
+.description-section::after {
+    top: 0;
+    right: 0;
+    border-left: 50px solid transparent;
+    border-top: 50px solid #38D430;
+}
+
+
+@media (max-width: 768px) {
+    .description-inner-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .description-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .description-text p {
+        font-size: 1rem;
+    }
+}

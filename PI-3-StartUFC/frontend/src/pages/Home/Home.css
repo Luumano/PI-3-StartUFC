@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw; /* Garante que nenhum elemento ultrapasse a largura da tela */
+}
+
+body {
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+    width: 100vw; /* Ocupa toda a largura da tela */
+    overflow-x: hidden; /* Remove rolagem horizontal */
+    position: relative;
+  
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+  background-color: #f8f9fa;
+    z-index: -1;
+}

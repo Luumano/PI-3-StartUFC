@@ -1,0 +1,104 @@
+.criar-evento-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+background-color: #fff;
+}
+
+.logo-com-bloco {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 40px;
+  gap: 20px;
+}
+
+.logo-esquerda {
+  width: 180px;
+  height: auto;
+}
+
+.bolinhas-verdes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.bolinha {
+  width: 10px;
+  height: 10px;
+  background-color: #00d600;
+  border-radius: 50%;
+}
+
+.titulo-pagina {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #002734;
+}
+
+.formulario-evento {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulario-evento label {
+  font-weight: 600;
+  color: #002734;
+}
+
+.formulario-evento input[type="text"],
+.formulario-evento textarea,
+.formulario-evento input[type="file"] {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.formulario-evento textarea {
+  resize: vertical;
+}
+
+.formulario-evento input[type="datetime-local"] {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.formulario-evento input[type=number]{
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.btn-enviar {
+  width: fit-content;
+  background-color: #002734;
+  color: #00d600;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-enviar:hover {
+  background-color: #001e25;
+}
+
+.mensagem {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #008800;
+}

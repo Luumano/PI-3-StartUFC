@@ -1,0 +1,56 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sqlserver
+    volumes:
+      - ./app/Images:/app/Images
+    networks:
+      - startufc-network
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "YourStrong@Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+      - ./APIStartUFC.Infrastructure/Migration:/docker-entrypoint-initdb.d
+    command: >
+      /bin/sh -c "
+      /opt/mssql/bin/sqlservr & 
+      pid=$!; 
+      until /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Passw0rd' -Q 'SELECT 1' > /dev/null 2>&1; do 
+        echo 'Waiting for SQL Server to start...'; 
+        sleep 5; 
+      done; 
+      /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Passw0rd' -Q 'IF DB_ID(''PI.III'') IS NULL CREATE DATABASE [PI.III]';
+      /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Passw0rd' -d PI.III -i /docker-entrypoint-initdb.d/Migrations.sql;
+      wait $pid"
+    networks:
+      - startufc-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+    networks:
+      - startufc-network
+
+volumes:
+  sql_data:
+
+networks:
+  startufc-network:
+    driver: bridge

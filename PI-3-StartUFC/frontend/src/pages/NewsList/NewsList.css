@@ -1,0 +1,161 @@
+.news-section-container {
+    max-width: 1180px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    background-color: #f8f9fa;
+  
+}
+
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.news-title {
+    font-family: "Gabarito", serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.decorative-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #8BC34A;
+}
+.dot.dark {
+    background-color: #38D430; 
+}
+
+
+.news-grid {
+    display: grid;
+ 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+.news-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz este container crescer para ocupar o espaço */
+}
+
+.card-content h3 {
+    font-family: 'Gabarito', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.card-content p {
+    font-family: 'Open Sans', serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1; /* Empurra o botão para o final */
+}
+
+
+.ler-mais-btn {
+    background-color: #38D430;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-family: 'Open Sans', serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+    transition: background-color 0.2s;
+}
+.ler-mais-btn:hover {
+    background-color: #2ca525;
+}
+
+/* Container do botão principal "Ir para notícias" */
+.all-news-button-container {
+    display: flex;
+    justify-content: right;
+    margin-top: 3rem;
+}
+
+
+/* Mensagens de Loading e Erro */
+.loading, .no-news {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 3rem 0;
+    color: #555;
+}
+
+
+@media (max-width: 900px) {
+    /* Em telas médias, 2 colunas */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .all-news-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+}
+
+@media (max-width: 600px) {
+    /* Em telas pequenas, 1 coluna */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+     .all-news-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+}

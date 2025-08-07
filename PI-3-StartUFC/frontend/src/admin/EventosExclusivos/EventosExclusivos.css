@@ -1,0 +1,89 @@
+.evento-exclusivos {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #FFF;
+}
+
+.eventos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #FFF;
+}
+
+.titulo-eventos {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.grid-eventos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card-evento {
+    background-color: #001D3D;
+    color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.img-evento {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-evento h3 {
+    font-size: 14px;
+    margin: 12px 0 4px;
+}
+
+.card-evento p {
+    font-size: 12px;
+    color: #ffffff;
+    margin: 0 12px 10px;
+}
+
+.btn-editar-evento {
+  background-color: #94a102;
+  color: #ffffff;
+  font-size: 16px;
+  margin-right: 12px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-editar-evento:hover {
+  background-color:#454b00;
+  color: #FFF;
+}
+
+.btn-criar-evento {
+  background-color: #002734;
+  color: #00d600;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #ccc;
+  margin-left: 0;
+}
+
+.btn-criar-evento:hover {
+  background-color: #001e25;
+}

@@ -1,0 +1,194 @@
+.login-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+.container-login {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(35, 211, 25);
+  width: 100%;
+  max-width: 50rem;
+  min-height: 35rem;
+  border-radius: 30px;
+  display: flex;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+
+.side-bar-login {
+  background-color: rgba(0, 42, 58, 1);
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1.5rem; 
+  color: white;
+}
+
+.side-bar-login  p{
+  font-size: 45px;
+  color: white; 
+}
+
+.side-bar-login a{
+  margin-top: 19px;
+  font-size: 25px;
+  color: white; 
+}
+
+
+.side-bar-login .img-logo {
+  width: 190px;
+}
+
+
+.side-bar-login .button_btn_register {
+  background: rgb(35, 211, 25);
+  width: 80%;
+  color: rgb(0, 42, 58); 
+  padding: 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.side-bar-login .button_btn_register:hover {
+    transform: scale(1.05);
+}
+
+
+
+.login-info {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  background-color: rgb(35, 211, 25);
+}
+
+.login-title {
+    font-size: 2.2rem;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.login-info form {
+    width: 100%;
+}
+
+.login-info .login-email-label, 
+.login-info .login-password-label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.login-info .login-email-input, 
+.login-info .login-password-input {
+  height: 2.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}
+
+.login-info .reset-password {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: #007bff;
+}
+
+.login-info .button-enter {
+  background: rgba(0, 42, 58, 1);
+  width: 80%;
+  color: #fff;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 0 auto;
+  display: block; 
+}
+
+.login-info .button-enter:hover {
+    background: #001f2b;
+}
+
+
+
+
+/* 1. Container para o input e o ícone */
+.password-input-container {
+  position: relative;
+  width: 100%;
+  /* A margem de baixo que antes estava no input, agora fica no container */
+  margin-bottom: 1.5rem;
+}
+
+/* 2. Estilo e posicionamento do ícone */
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888; /* Uma cor um pouco mais suave */
+  font-size: 1.2rem; /* Aumenta um pouco o tamanho do ícone */
+}
+
+/* 3. Ajuste no input de senha original */
+.login-info .login-password-input {
+  /* Adiciona um espaço na direita para o texto não ficar atrás do ícone */
+  padding-right: 50px !important;
+  /* Removemos a margem que agora está no container */
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 768px) {
+  .login-page-wrapper {
+    padding: 0;
+    align-items: flex-start; 
+  }
+
+  .container-login {
+    flex-direction: column; 
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  .side-bar-login {
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .login-info {
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+}

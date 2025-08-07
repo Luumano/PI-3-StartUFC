@@ -1,0 +1,96 @@
+
+.about {
+    max-width: 1180px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start; /* Alinha o topo da imagem/título com o topo do texto */
+    gap: 3rem;
+}
+
+
+.about-image-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column; /* Empilha o título e a imagem */
+    gap: 2rem; /* Espaço entre o título e a imagem */
+}
+
+.about-title {
+    font-family: "Gabarito", serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0; /* Remove margens padrão do h1 */
+    text-align: left; /* Garante o alinhamento à esquerda */
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.about-text-column {
+    margin-top: 5rem;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* Espaço entre os parágrafos */
+}
+
+.about-text-column p {
+    font-family: "Open Sans", serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Seção de Apoiadores */
+.supporters-section {
+    margin-top: 1.5rem;
+}
+
+.supporters-section h4 {
+    font-family: "Gabarito", serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.supporters-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-image-column {
+        width: 100%;
+        align-items: center; /* Centraliza o título e a imagem no mobile */
+    }
+
+    .about-title {
+        text-align: center;
+    }
+
+    .about-image-column .img {
+        width: 80%;
+        max-width: 400px;
+    }
+}

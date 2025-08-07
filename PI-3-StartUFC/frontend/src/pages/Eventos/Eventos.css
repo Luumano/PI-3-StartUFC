@@ -1,0 +1,132 @@
+
+
+.eventos-page {
+    background-color: #f8f9fa; 
+}
+
+
+.eventos-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    min-height: calc(100vh - 160px);
+}
+
+/* Cabeçalho da página */
+.eventos-header {
+    margin-bottom: 2.5rem;
+}
+
+
+.eventos-header .main-title {
+    font-family: "Gabarito", serif;
+    font-size: 2.5rem;
+    color: #002A3A;
+    margin: 0;
+
+}
+
+/* Grid que segura os cards */
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas grandes */
+    gap: 2rem;
+}
+
+/* Estilo do card */
+.evento-card {
+    background:  #002A3A;;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden; /* Garante que a imagem respeite a borda arredondada */
+
+    /* Usamos flexbox para organizar o conteúdo interno do card */
+    display: flex;
+    flex-direction: column;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.evento-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.evento-info {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between; /* Empurra o título para a esquerda e o botão para a direita */
+    align-items: center;           /* Alinha eles verticalmente no meio */
+    flex-grow: 1; 
+}
+.evento-titulo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #f8f9fa;
+    margin: 0;
+    text-align: left;
+}
+
+.evento-botao {
+    background-color: #00b33c;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.0rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s; 
+    white-space: nowrap; 
+    flex-shrink: 0;      
+}
+.evento-botao:hover {
+    background-color: #00972c;
+}
+
+.eventos-section {
+    margin-bottom: 4rem; /* Aumenta o espaço entre as seções */
+}
+
+
+.section-title {
+    font-family: "Gabarito", serif;
+    font-size: 2rem; /* Um pouco menor que o título principal */
+    color: #002A3A;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00b33c; /* Linha verde para destacar */
+}
+
+/* Mensagem para quando não houver eventos */
+.eventos-placeholder {
+    color: #6c757d;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+    .eventos-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .eventos-grid {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
+    .eventos-header {
+        text-align: center; /* Centraliza o título no mobile */
+    }
+}

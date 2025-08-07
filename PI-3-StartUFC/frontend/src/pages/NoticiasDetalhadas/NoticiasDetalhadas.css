@@ -1,0 +1,145 @@
+.noticia-detalhada-page {
+  background-color: #f4f4f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.noticia-detalhada-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Open Sans', sans-serif;
+  flex-grow: 1;
+}
+
+.header-detalhes {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.back-arrow-detalhes {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.back-arrow-detalhes:hover {
+    transform: translateX(-5px);
+}
+
+.noticia-article {
+  background-color: #fff;
+  padding: 40px 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.noticia-titulo {
+  font-family: "Gabarito", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #333;
+  margin: 0;
+}
+
+.noticia-data {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 10px 0 30px;
+  text-transform: capitalize;
+}
+
+.image-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.noticia-imagem-principal {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Estilos para os pontos decorativos */
+.dots {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fill, 10px);
+  gap: 6px;
+  align-content: space-between;
+}
+
+.dots-left {
+  left: -50px; /* Posição à esquerda da imagem */
+}
+
+.dots-right {
+  right: -50px; /* Posição à direita da imagem */
+}
+
+/* Cria os pontos usando um pseudo-elemento */
+.dots::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #26A65B; /* Cor verde */
+  border-radius: 50%;
+  box-shadow: 
+    0 14px 0 #26A65B, /* Ponto abaixo */
+    0 28px 0 #26A65B,
+    14px 0 0 #26A65B, /* Ponto ao lado */
+    14px 14px 0 #26A65B,
+    14px 28px 0 #26A65B;
+}
+
+
+.noticia-corpo {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.noticia-corpo p {
+  margin: 0 0 1.5em 0; /* Espaçamento entre parágrafos */
+}
+
+.noticia-corpo p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Mensagens de loading e erro */
+.loading, .no-news {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 80px 20px;
+  color: #666;
+}
+
+
+@media (max-width: 900px) {
+  .dots {
+    display: none; 
+  }
+}
+
+@media (max-width: 600px) {
+  .noticia-article {
+    padding: 25px;
+  }
+  .noticia-titulo {
+    font-size: 2rem;
+  }
+}
