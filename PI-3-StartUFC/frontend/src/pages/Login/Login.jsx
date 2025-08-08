@@ -5,6 +5,7 @@ import Navbar2 from '../../components/Navbar2/Navbar2';
 import { useAuth } from '../../context/AuthContext';
 import './Login.css'; 
 import { FaSpinner, FaEye, FaEyeSlash } from 'react-icons/fa'; // <-- NOVO: Importa os ícones de olho
+import LogoStart from '../../assets/StartUFC-logo-verde.png';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -53,7 +54,7 @@ const Login = () => {
                 <div className="container-login">
                     <div className="side-bar-login">
                         <p>Bem Vindo de Volta!</p>
-                          <img className='img-logo' src="/src/assets/StartUFC-logo-verde.png" alt="Logo" />
+                          <img className='img-logo' src={LogoStart} alt="Logo" />
                         <p>Não tem uma conta?</p>
                         <Link to="/register" className='button_btn_register'>Cadastre-se</Link>
                     </div>
