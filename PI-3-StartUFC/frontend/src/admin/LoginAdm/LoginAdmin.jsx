@@ -5,6 +5,7 @@ import api from '../../services/api';
 import { useNavigate } from "react-router-dom";
 import { FaSpinner } from 'react-icons/fa';
 import { useAuth } from '../../context/AuthContext'; // <--- Importe useAuth
+import LogoStart from '../../assets/StartUFC-logo-verde.png';
 
 const LoginAdmin = () => {
     const [email, setEmail] = useState('');
@@ -55,7 +56,7 @@ const LoginAdmin = () => {
                     <p className="sidebar-text">Faz parte do START?</p>
                     <p className='sidebar-text2'>Faça login para acessar</p>
                     <p></p>
-                    <img className='img-logo-admin' src="/src/assets/StartUFC-logo-verde.png" alt="Logo" />
+                    <img className='img-logo-admin' src={LogoStart} alt="Logo" />
                     <div></div>
                 </div>
                 <div className="login-info-admin">
