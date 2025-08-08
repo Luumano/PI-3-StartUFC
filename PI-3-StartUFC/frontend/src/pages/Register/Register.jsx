@@ -3,6 +3,7 @@ import './Register.css';
 import Navbar2 from '../../components/Navbar2/Navbar2';
 import api from '../../services/api';
 import { useNavigate, Link } from 'react-router-dom';
+import LogoStart from '../../assets/StartUFC-logo-verde.png';
 
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
@@ -59,7 +60,7 @@ const Register = () => {
                 <div className="container-register">
                     <div className="side-bar-register">
                         <p>Bem Vindo</p>
-                        <img className='img-logo' src="/src/assets/StartUFC-logo-verde.png" alt="Logo" />
+                        <img className='img-logo' src={LogoStart} alt="Logo" />
                         <p>Já tem conta na Start?</p>
                         <Link to="/login" className='button-btn-login'>Logar</Link>
                     </div>
